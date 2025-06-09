@@ -1,0 +1,610 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X.com</title>
+    <!-- google font cdn -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- tailwind css link -->
+    <link href="./src/output.css" rel="stylesheet">
+</head>
+
+<body class="bg-black text-white">
+    <div class="xl:container flex flex-col justify-center sm:flex-row"> 
+        <!-- top row (for mobile devices) -->
+        <div class="flex flex-col sticky top-0 z-1 px-5 h-27 bg-black opacity-85 backdrop-blur-3xl sm:hidden">
+            <div class="first-row flex justify-between items-center h-15 pt-2">
+                <!-- My profile -->
+                <div class="flex">
+                    <div>
+                        <img class="w-10 rounded-full" src="assets/ubaid.jpg" alt="img not found">
+                    </div>
+                </div>
+                <!-- logo -->
+                <div class="invert flex ms-10">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"
+                        class="w-6 hover:cursor-pointer r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-lrsllp r-1nao33i r-16y2uox r-8kz0gk">
+                        <g>
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+                <!-- subscribe button -->
+                <button
+                    class="px-3 py-2 w-fit h-fit text-md bg-black text-white text-center font-semibold border-[1px] border-neutral-500 rounded-full cursor-pointer">Get
+                    Premium</button>
+            </div>
+            <!-- suggestions -->
+            <div class="second-row flex relative h-12 hover:cursor-pointer">
+                <div
+                    class="left w-1/2 flex justify-center items-center font-semibold hover:bg-neutral-900 hover: transition hover:ease-in">
+                    <span>For you</span>
+                    <div class="w-14 h-1 bg-blue-400 absolute top-11 rounded-full"></div>
+                </div>
+                <div
+                    class="right w-1/2 flex justify-center items-center font-semibold text-neutral-500 hover:bg-neutral-900 hover: transition hover:ease-in">
+                    <span>Following</span>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- first-column -->
+        <div class="hidden sm:block sm:w-fit lg:w-[40%] xl:w-[60%]">
+            <!-- logo -->
+            <div class="logo flex justify-end xl:justify-start xl:ps-23 sticky top-0">
+                <div class="invert px-11 xl:px-5 my-4 flex">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"
+                        class="w-8 hover:cursor-pointer r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-lrsllp r-1nao33i r-16y2uox r-8kz0gk">
+                        <g>
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <!-- sidebar -->
+            <div class="sidebar flex justify-end xl:justify-center mx-6 xl:mx-0 sticky top-16">
+                <ul class="flex text-[20px] space-y-[4.5px] sm:flex-col">
+                    <li
+                        class="flex items-center w-fit gap-4 px-6 py-2 hover:bg-neutral-900 hover:rounded-full hover:cursor-pointer font-bold">
+                        <i class="fa-solid fa-house"></i><span class="hidden xl:block">Home</span>
+                    </li>
+                    <li
+                        class="flex items-center w-fit gap-4 px-6 py-2 hover:bg-neutral-900 hover:rounded-full hover:cursor-pointer ">
+                        <span class="material-symbols-outlined ">search</span><span
+                            class="hidden xl:block">Explore</span>
+                    </li>
+                    <li
+                        class="flex items-center w-fit gap-4 px-6 py-2 hover:bg-neutral-900 hover:rounded-full hover:cursor-pointer ">
+                        <span class="material-symbols-outlined ">notifications</span><span
+                            class="hidden xl:block">Notifications</span>
+                    </li>
+                    <li
+                        class="flex items-center w-fit gap-4 px-6 py-2 hover:bg-neutral-900 hover:rounded-full hover:cursor-pointer ">
+                        <span class="material-symbols-outlined ">mail</span><span
+                            class="hidden xl:block">Messages</span>
+                    </li>
+                    <li
+                        class="flex items-center w-fit gap-4 px-6 py-2 hover:bg-neutral-900 hover:rounded-full hover:cursor-pointer  inverted">
+                        <span class="material-symbols-outlined ">smart_toy</span><span
+                            class="hidden xl:block">Grok</span>
+                    </li>
+                    <li
+                        class="flex items-center w-fit gap-4 px-6 py-2 hover:bg-neutral-900 hover:rounded-full hover:cursor-pointer  inverted">
+                        <span class="material-symbols-outlined">group</span><span
+                            class="hidden xl:block">Communities</span>
+                    </li>
+                    <li
+                        class="flex items-center w-fit gap-4 px-6 py-2 hover:bg-neutral-900 hover:rounded-full hover:cursor-pointer  inverted">
+                        <span class="invert">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"
+                                class="w-5 hover:cursor-pointer r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-lrsllp r-1nao33i r-16y2uox r-8kz0gk">
+                                <g>
+                                    <path
+                                        d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </span><span class="hidden xl:block">Premium</span>
+                    </li>
+                    <li
+                        class="flex items-center w-fit gap-4 px-6 py-2 hover:bg-neutral-900 hover:rounded-full hover:cursor-pointer ">
+                        <span class="material-symbols-outlined ">person</span><span
+                            class="hidden xl:block">Profile</span>
+                    </li>
+                    <li
+                        class="flex items-center w-fit gap-4 px-6 py-2 hover:bg-neutral-900 hover:rounded-full hover:cursor-pointer ">
+                        <span class="material-symbols-outlined ">pending</span><span class="hidden xl:block">More</span>
+                    </li>
+                </ul>
+            </div>
+            <!-- post button (for big screens) -->
+            <button
+                class="hidden xl:block my-3 ms-25 py-[12px] w-[62%] text-lg bg-white text-black text-center font-bold rounded-full cursor-pointer sticky top-132">Post</button>
+            <!-- post button -->
+            <div class="button flex justify-end xl:hidden my-4 sticky top-120">
+                <div class="flex justify-center items-center w-13 h-13 mx-9 bg-white rounded-full">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"
+                        class="w-6 r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-1472mwg r-lrsllp"
+                        style="color: rgb(15, 20, 25);">
+                        <g>
+                            <path
+                                d="M23 3c-6.62-.1-10.38 2.421-13.05 6.03C7.29 12.61 6 17.331 6 22h2c0-1.007.07-2.012.19-3H12c4.1 0 7.48-3.082 7.94-7.054C22.79 10.147 23.17 6.359 23 3zm-7 8h-1.5v2H16c.63-.016 1.2-.08 1.72-.188C16.95 15.24 14.68 17 12 17H8.55c.57-2.512 1.57-4.851 3-6.78 2.16-2.912 5.29-4.911 9.45-5.187C20.95 8.079 19.9 11 16 11zM4 9V6H1V4h3V1h2v3h3v2H6v3H4z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <!-- My Account -->
+            <div
+                class="flex justify-end items-center mt-6 mx-6 hover:bg-neutral-900 hover:cursor-pointer hover:rounded-full xl:justify-between xl:pe-3 xl:mt-10 xl:ms-22 xl:w-[72%] sticky top-136 md:top-155">
+                <div class="flex items-center m-4 gap-3">
+                    <div>
+                        <img class="w-18 md:w-11 rounded-full" src="assets/ubaid.jpg" alt="img not found">
+                    </div>
+                    <div class="hidden xl:block">
+                        <div class="font-semibold flex items-center gap-2">Ubaid Saifi<i
+                                class="fa-solid fa-circle-check text-sm text-blue-400"></i></div>
+                        <div class="text-neutral-500 text-[15px]">@ubaidsaifee</div>
+                    </div>
+                </div>
+                <div class="hidden xl:block">
+                    <i class="fa-solid fa-ellipsis text-sm "></i>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Second-column/row -->
+        <div class="w-full relative pb-12 sm:border-x-1 border-neutral-700">
+            <!-- suggestions -->
+            <div class="suggestions hidden relative hover:cursor-pointer sm:flex">
+                <div
+                    class="left w-1/2 h-13 flex justify-center items-center font-semibold hover:bg-neutral-900 hover: transition hover:ease-in">
+                    <span>For you</span>
+                    <div class="w-14 h-1 bg-blue-400 absolute top-12 rounded-full"></div>
+                </div>
+                <div
+                    class="right w-1/2 h-13 flex justify-center items-center font-semibold text-neutral-500 hover:bg-neutral-900 hover: transition hover:ease-in">
+                    <span>Following</span>
+                </div>
+            </div>
+            <hr class="w-full text-neutral-700">
+            <!-- post -->
+            <div class="post">
+                <div class="hidden my-4 mx-5 sm:flex">
+                    <!-- profile-image -->
+                    <div class="img">
+                        <img class="w-12 rounded-full" src="assets/ubaid.jpg" alt="img not found">
+                    </div>
+                    <div class="w-full flex flex-col">
+                        <!-- writing-section -->
+                        <div class="input">
+                            <input class="w-full h-10 mx-2 px-1 text-[20px] outline-0" type="text"
+                                placeholder="What's happening?">
+                            <div class="my-3 mx-2 text-sm font-semibold flex text-blue-400">
+                                <span class="material-symbols-outlined mx-1">globe</span><span>Everyone can reply</span>
+                            </div>
+                            <hr class="my-4 w-full text-neutral-700">
+                        </div>
+                        <!-- features -->
+                        <div class="features w-full flex items-center justify-between">
+                            <ul class="flex w-full text-blue-400">
+                                <li><span class="material-symbols-outlined mx-2 hover:cursor-pointer">imagesmode</span>
+                                </li>
+                                <li><span class="material-symbols-outlined mx-2 hover:cursor-pointer">gif_box</span>
+                                </li>
+                                <li><span class="material-symbols-outlined mx-2 hover:cursor-pointer">smart_toy</span>
+                                </li>
+                                <li><span class="material-symbols-outlined mx-2 hover:cursor-pointer">checklist</span>
+                                </li>
+                                <li><span
+                                        class="material-symbols-outlined mx-2 hover:cursor-pointer">sentiment_satisfied</span>
+                                </li>
+                                <li><span
+                                        class="material-symbols-outlined mx-2 hover:cursor-pointer">calendar_clock</span>
+                                </li>
+                                <li><span class="material-symbols-outlined mx-2 hover:cursor-pointer">location_on</span>
+                                </li>
+                            </ul>
+                            <!-- post button -->
+                            <button
+                                class="px-4 py-2 text-[15px] bg-neutral-500 text-black text-center font-bold rounded-full cursor-pointer">Post<button>
+                        </div>
+                    </div>
+                </div>
+                <!-- more posts -->
+                <div class="show_post cursor-pointer">
+                    <hr class="w-full text-neutral-700">
+                    <div class="my-3 text-blue-400 text-center">
+                        Show 70 posts
+                    </div>
+                    <hr class="w-full text-neutral-700">
+                </div>
+            </div>
+            <!-- Tweets -->
+            <div class="tweets">
+                <!-- tweet-1 -->
+                <div class="tweet-1 flex cursor-pointer">
+                    <!-- tweet-profile-image -->
+                    <div class="tweet-profile-image ms-3 me-5 my-4 sm:me-0">
+                        <img class="w-8 sm:w-13 rounded-full" src="https://pbs.twimg.com/profile_images/1924581551431680001/7SxUZPNX_200x200.jpg" alt="img not found">
+                    </div>
+                    <div class="tweet-content w-[70%] my-4 sm:w-fit sm:m-4 ml-0">
+                        <!-- tweet-header -->
+                        <div class="tweet-header flex justify-between">
+                            <div class="flex items-center gap-1.5">
+                                <span class="font-semibold hidden sm:inline">Grand Theft Auto 6 Alerts</span>
+                                <span class="font-semibold sm:hidden">Grand Thef...</span> <!-- For mobile devices -->
+                                <i class="fa-solid fa-circle-check text-sm text-blue-400"></i>
+                                <span class="text-neutral-500 text-[15px] hidden sm:inline">@GTA6Alerts · 20h</span>
+                            </div>
+                            <div class="more flex items-center text-sm">
+                                <i
+                                    class="fa-solid fa-robot p-2 text-neutral-400 hover:bg-gray-900 hover:text-blue-400 hover:rounded-full"></i>
+                                <i
+                                    class="fa-solid fa-ellipsis p-2 text-neutral-400 hover:bg-gray-900 hover:text-blue-400 hover:rounded-full"></i>
+                            </div>
+                        </div>
+                        <span class="text-neutral-500 text-[15px] sm:hidden">@GTA6Alerts · 20h</span> <!-- For mobile devices -->
+                        <!-- tweet-bio -->
+                        <div class="tweet-bio">
+                            <span>353 days left until GTA 6 release. ⏳</span>
+                        </div>
+                        <!-- tweet-media -->
+                        <div class="tweet-media my-3">
+                            <img class="w-[100%] md:w-4/5 rounded-xl border-[0.5px] border-neutral-700" src="assets/GTA6.jpeg"
+                                alt="img not found">
+                        </div>
+                        <!-- tweet-actions -->
+                        <div class="tweet-actions flex justify-between text-neutral-400">
+                            <div class="left-actions w-[80%] flex justify-between text-[10px] sm:text-sm">
+                                <!-- comment -->
+                                <div class="flex items-center hover:text-blue-400">
+                                    <i
+                                        class="fa-regular fa-comment p-2 hover:bg-gray-900 hover:text-blue-400 hover:rounded-full"></i><span>23</span>
+                                </div>
+                                <!-- repost -->
+                                <div class="flex items-center hover:text-green-400">
+                                    <i
+                                        class="fa-solid fa-repeat p-2 hover:bg-gray-900 hover:text-green-400 hover:rounded-full"></i><span>455</span>
+                                </div>
+                                <!-- like -->
+                                <div class="flex items-center hover:text-pink-700">
+                                    <i
+                                        class="fa-regular fa-heart p-2 hover:bg-gray-900 hover:text-pink-700 hover:rounded-full"></i><span>2.4K</span>
+                                </div>
+                                <!-- view -->
+                                <div class="flex items-center hover:text-blue-400">
+                                    <i
+                                        class="fa-solid fa-chart-simple p-2 hover:bg-gray-900 hover:text-blue-400 hover:rounded-full"></i><span>16K</span>
+                                </div>
+                            </div>
+                            <div class="right-actions sm:w-[10%] flex items-center mx-2">
+                                <!-- bookmark -->
+                                <div>
+                                    <i
+                                        class="fa-regular fa-bookmark px-1 py-2 sm:px-3 sm:py-3 text-[10px] sm:text-sm hover:bg-gray-900 hover:text-blue-400 hover:rounded-full"></i>
+                                </div>
+                                <!-- share -->
+                                <div>
+                                    <i
+                                        class="fa-solid fa-arrow-up-from-bracket px-1 py-2 sm:px-3 sm:py-3 text-[10px] sm:text-sm hover:bg-gray-900 hover:text-blue-400 hover:rounded-full"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="w-full text-neutral-700">
+                <!-- tweet-2 -->
+                <div class="tweet-2 flex cursor-pointer">
+                    <!-- tweet-profile-image -->
+                    <div class="tweet-profile-image ms-3 me-5 my-4 sm:me-0">
+                        <img class="w-8 sm:w-13 rounded-full"
+                            src="https://pbs.twimg.com/media/FiEccO5X0AMBvSN.jpg"
+                            alt="img not found">
+                    </div>
+                    <div class="tweet-content w-[70%] my-4 sm:w-fit sm:m-4 ml-0">
+                        <!-- tweet-header -->
+                        <div class="tweet-header flex justify-between">
+                            <div class="flex items-center gap-1.5">
+                                <span class="font-semibold hidden sm:inline">Cristiano Ronaldo</span>
+                                <span class="font-semibold sm:hidden">Cristiano Ro...</span>
+                                <i class="fa-solid fa-circle-check text-sm text-blue-400"></i>
+                                <span class="text-neutral-500 text-[15px] hidden sm:inline">@Cristiano · Jun 7</span>
+                            </div>
+                            <div class="more flex items-center text-sm">
+                                <i
+                                    class="fa-solid fa-robot p-2 text-neutral-400 hover:bg-gray-900 hover:text-blue-400 hover:rounded-full"></i>
+                                <i
+                                    class="fa-solid fa-ellipsis p-2 text-neutral-400 hover:bg-gray-900 hover:text-blue-400 hover:rounded-full"></i>
+                            </div>
+                        </div>
+                        <span class="text-neutral-500 text-[15px] sm:hidden">@Cristiano · Jun 7</span> <!-- For mobile devices -->
+                        <!-- tweet-bio -->
+                        <div class="tweet-bio">
+                            <span>É por nós. É por vocês. É por Portugal. Amanhã é dia de fazer história outra vez
+                                🇵🇹</span>
+                        </div>
+                        <!-- tweet-media -->
+                        <div class="tweet-media my-3">
+                            <img class="w-[100%] md:w-4/5 rounded-xl border-[0.5px] border-neutral-700" src="assets/CR7.jpeg"
+                                alt="img not found">
+                        </div>
+                        <!-- tweet-actions -->
+                        <div class="tweet-actions flex justify-between text-neutral-400">
+                            <div class="left-actions w-[80%] flex justify-between text-[10px] sm:text-sm">
+                                <div class="flex items-center hover:text-blue-400">
+                                    <i
+                                        class="fa-regular fa-comment p-2 hover:bg-gray-900 hover:text-blue-400 hover:rounded-full"></i><span>8.6K</span>
+                                </div>
+                                <div class="flex items-center hover:text-green-400">
+                                    <i
+                                        class="fa-solid fa-repeat p-2 hover:bg-gray-900 hover:text-green-400 hover:rounded-full"></i><span>34K</span>
+                                </div>
+                                <div class="flex items-center hover:text-pink-700">
+                                    <i
+                                        class="fa-regular fa-heart p-2 hover:bg-gray-900 hover:text-pink-700 hover:rounded-full"></i><span>482K</span>
+                                </div>
+                                <div class="flex items-center hover:text-blue-400">
+                                    <i
+                                        class="fa-solid fa-chart-simple p-2 hover:bg-gray-900 hover:text-blue-400 hover:rounded-full"></i><span>25M</span>
+                                </div>
+                            </div>
+                            <div class="right-actions w-[10%] flex items-center mx-2">
+                                <div>
+                                    <i
+                                        class="fa-regular fa-bookmark px-1 py-2 sm:px-3 sm:py-3 text-[10px] sm:text-sm hover:bg-gray-900 hover:text-blue-400 hover:rounded-full"></i>
+                                </div>
+                                <div>
+                                    <i
+                                        class="fa-solid fa-arrow-up-from-bracket px-1 py-2 sm:px-3 sm:py-3 text-[10px] sm:text-sm hover:bg-gray-900 hover:text-blue-400 hover:rounded-full"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="w-full text-neutral-700">
+                <!-- tweet-3 -->
+                <div class="tweet-3 flex cursor-pointer">
+                    <!-- tweet-profile-image -->
+                    <div class="tweet-profile-image ms-3 me-5 my-4 sm:me-0">
+                        <img class="w-8 sm:w-13 rounded-full" src="https://pbs.twimg.com/profile_images/1542000599050334208/eMyobmGf_400x400.jpg" alt="img not found">
+                    </div>
+                    <div class="tweet-content w-[70%] my-4 sm:w-fit sm:m-4 ml-0">
+                        <!-- tweet-header -->
+                        <div class="tweet-header flex justify-between">
+                            <div class="flex items-center gap-1.5">
+                                <span class="font-semibold">Anime Tweets</span>
+                                <i class="fa-solid fa-circle-check text-sm text-blue-400"></i>
+                                <span class="text-neutral-500 text-[15px] hidden sm:inline">@AnimexTwts · May 29</span>
+                            </div>
+                            <div class="more flex items-center text-sm">
+                                <i
+                                    class="fa-solid fa-robot p-2 text-neutral-400 hover:bg-gray-900 hover:text-blue-400 hover:rounded-full"></i>
+                                <i
+                                    class="fa-solid fa-ellipsis p-2 text-neutral-400 hover:bg-gray-900 hover:text-blue-400 hover:rounded-full"></i>
+                            </div>
+                        </div>
+                        <span class="text-neutral-500 text-[15px] sm:hidden">@AnimexTwts · May 29</span> <!-- For mobile devices -->
+                        <!-- tweet-bio -->
+                        <div class="tweet-bio">
+                            <span>PAIN 💔</span>
+                        </div>
+                        <!-- tweet-media -->
+                        <div class="tweet-media my-3">
+                            <img class="w-[100%] md:w-4/5 rounded-xl border-[0.5px] border-neutral-700" src="assets/JJK.jpeg"
+                                alt="img not found">
+                        </div>
+                        <!-- tweet-actions -->
+                        <div class="tweet-actions flex justify-between text-neutral-400">
+                            <div class="left-actions w-[80%] flex justify-between text-[10px] sm:text-sm">
+                                <!-- comment -->
+                                <div class="flex items-center hover:text-blue-400">
+                                    <i
+                                        class="fa-regular fa-comment p-2 hover:bg-gray-900 hover:text-blue-400 hover:rounded-full"></i><span>284</span>
+                                </div>
+                                <!-- repost -->
+                                <div class="flex items-center hover:text-green-400">
+                                    <i
+                                        class="fa-solid fa-repeat p-2 hover:bg-gray-900 hover:text-green-400 hover:rounded-full"></i><span>1.6K</span>
+                                    <!-- like -->
+                                </div>
+                                <div class="flex items-center hover:text-pink-700">
+                                    <i
+                                        class="fa-regular fa-heart p-2 hover:bg-gray-900 hover:text-pink-700 hover:rounded-full"></i><span>56K</span>
+                                </div>
+                                <!-- view -->
+                                <div class="flex items-center hover:text-blue-400">
+                                    <i
+                                        class="fa-solid fa-chart-simple p-2 hover:bg-gray-900 hover:text-blue-400 hover:rounded-full"></i><span>943K</span>
+                                </div>
+                            </div>
+                            <div class="right-actions w-[10%] flex items-center mx-2">
+                                <!-- bookmark -->
+                                <div>
+                                    <i
+                                        class="fa-regular fa-bookmark px-1 py-2 sm:px-3 sm:py-3 text-[10px] sm:text-sm hover:bg-gray-900 hover:text-blue-400 hover:rounded-full"></i>
+                                </div>
+                                <!-- share -->
+                                <div>
+                                    <i
+                                        class="fa-solid fa-arrow-up-from-bracket px-1 py-2 sm:px-3 sm:py-3 text-[10px] sm:text-sm hover:bg-gray-900 hover:text-blue-400 hover:rounded-full"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="w-full text-neutral-700">
+            </div>
+        </div>
+
+
+        <!-- third-column -->
+        <div class="w-[78%] hidden lg:block">
+            <!-- search section -->
+            <div
+                class="search mx-7 mt-2 px-4 w-[70%] flex justify-center items-center border-1 border-neutral-700 rounded-full focus-within:border-2 focus-within:border-blue-400">
+                <i class="fa-solid fa-magnifying-glass text-neutral-500 text-sm"></i>
+                <input class="w-full px-2 py-2 outline-0 placeholder:text-white placeholder:font-light" type="text"
+                    placeholder="Search">
+            </div>
+            <!-- subscription section -->
+            <div class="mx-7 p-4 my-4 w-[70%] flex flex-col justify-center border-1 border-neutral-700 rounded-xl">
+                <h1 class="font-bold text-xl">Subscribe to Premium</h1>
+                <div class="text-[14px] my-3">
+                    Subscribe to unlock new features and if eligible, receive a share of revenue.
+                </div>
+                <button
+                    class="bg-blue-500 w-fit px-4 py-[5px] rounded-full font-semibold cursor-pointer">Subscribe</button>
+            </div>
+            <!-- whats happening section -->
+            <div
+                class="mx-7 p-4 w-[70%] flex flex-col justify-center border-1 border-neutral-700 rounded-xl cursor-pointer">
+                <h1 class="font-bold text-xl">What's happening</h1>
+                <!-- comment-1 -->
+                <div class="item my-4 flex justify-between items-center">
+                    <div>
+                        <div class="text-sm text-neutral-500">Trending in India</div>
+                        <h1 class="text-md font-semibold">#freepalestine</h1>
+                        <div class="text-sm text-neutral-500">1.4M posts</div>
+                    </div>
+                    <i
+                        class="fa-solid fa-ellipsis p-2 text-neutral-500 text-sm hover:bg-gray-900 hover:text-blue-400 hover:rounded-full"></i>
+                </div>
+                <!-- comment-2 -->
+                <div class="item my-4 flex justify-between items-center">
+                    <div>
+                        <div class="text-sm text-neutral-500">Trending in India</div>
+                        <h1 class="text-md font-semibold">#muhammad</h1>
+                        <div class="text-sm text-neutral-500">788K posts</div>
+                    </div>
+                    <i
+                        class="fa-solid fa-ellipsis p-2 text-neutral-500 text-sm hover:bg-gray-900 hover:text-blue-400 hover:rounded-full"></i>
+                </div>
+                <!-- comment-3 -->
+                <div class="item my-4 flex justify-between items-center">
+                    <div>
+                        <div class="text-sm text-neutral-500">Trending in India</div>
+                        <h1 class="text-md font-semibold">#muslim</h1>
+                        <div class="text-sm text-neutral-500">560K posts</div>
+                    </div>
+                    <i
+                        class="fa-solid fa-ellipsis p-2 text-neutral-500 text-sm hover:bg-gray-900 hover:text-blue-400 hover:rounded-full"></i>
+                </div>
+                <!-- more comment -->
+                <div class="item">
+                    <span class="text-[15px] text-blue-400">Show more</span>
+                </div>
+            </div>
+            <!-- follow section -->
+            <div
+                class="mx-7 p-4 my-4 w-[70%] flex flex-col justify-center border-1 border-neutral-700 rounded-xl cursor-pointer sticky top-0">
+                <h1 class="font-bold text-xl">Who to follow</h1>
+                <!-- account 1 -->
+                <div class="account my-4 flex justify-between">
+                    <div class="flex items-center gap-3">
+                        <div>
+                            <img class="w-10 h-10 rounded-full" src="assets/SK-profile.jpg" alt="img not found">
+                        </div>
+                        <div>
+                            <div class="text-[15px] font-semibold flex items-center gap-2">Salman Khan<i
+                                    class="fa-solid fa-circle-check text-sm text-blue-400"></i></div>
+                            <div class="text-neutral-500 text-[14.5px]">@beingSalmanKhan</div>
+                        </div>
+                    </div>
+                    <div>
+                        <button
+                            class="py-1.5 px-4 bg-white text-black rounded-full font-semibold text-[14px]">Follow</button>
+                    </div>
+                </div>
+                <!-- account 2 -->
+                <div class="account my-4 flex justify-between">
+                    <div class="flex items-center gap-3">
+                        <div>
+                            <img class="w-10 h-10 rounded-full" src="assets/CR7-profile.jpg" alt="img not found">
+                        </div>
+                        <div>
+                            <div class="text-[15px] font-semibold flex items-center gap-2">Cristiano Ronaldo<i
+                                    class="fa-solid fa-circle-check text-sm text-blue-400"></i></div>
+                            <div class="text-neutral-500 text-[14.5px]">@Cristiano</div>
+                        </div>
+                    </div>
+                    <div>
+                        <button
+                            class="py-1.5 px-4 bg-white text-black rounded-full font-semibold text-[14px]">Follow</button>
+                    </div>
+                </div>
+                <!-- account 3 -->
+                <div class="account my-4 flex justify-between">
+                    <div class="flex items-center gap-3">
+                        <div>
+                            <img class="w-10 h-10 rounded-full" src="assets/DR-profile.jpg" alt="img not found">
+                        </div>
+                        <div>
+                            <div class="text-[15px] font-semibold flex items-center gap-2">Dhruv Rathee<i
+                                    class="fa-solid fa-circle-check text-sm text-blue-400"></i></div>
+                            <div class="text-neutral-500 text-[14.5px]">@dhruv_rathee</div>
+                        </div>
+                    </div>
+                    <div>
+                        <button
+                            class="py-1.5 px-4 bg-white text-black rounded-full font-semibold text-[14px]">Follow</button>
+                    </div>
+                </div>
+                <!-- more account -->
+                <div class="account">
+                    <span class="text-[15px] text-blue-400">Show more</span>
+                </div>
+            </div>
+            <!-- footer -->
+            <div class="footer mx-8 p-1 w-[70%] text-neutral-500 flex flex-wrap justify-center text-[10px] gap-2 sticky top-[46.5vh]">
+                <span class="hover:cursor-pointer hover:underline">Terms of Service</span><span>|</span>
+                <span class="hover:cursor-pointer hover:underline">Privacy Policy</span><span>|</span>
+                <span class="hover:cursor-pointer hover:underline">Cookie Policy</span><span>|</span>
+                <span class="hover:cursor-pointer hover:underline">Accessibility</span><span>|</span>
+                <span class="hover:cursor-pointer hover:underline">Ads info</span><span>|</span>
+                <span class="hover:cursor-pointer hover:underline">More<i class="fa-solid fa-ellipsis px-1"></i></span>
+                <span>&copy; 2025 X Corp.</span>
+            </div>
+        </div>
+
+
+        <!-- bottom row (for mobile devices) -->
+        <div class="flex justify-center items-center fixed bottom-0 w-full h-14 border-t-[0.5px] border-neutral-700 bg-black sm:hidden">
+            <ul class="flex justify-around w-full text-2xl">
+                <li class="w-fit hover:bg-neutral-900 hover:rounded-full hover:cursor-pointer font-bold">
+                    <i class="fa-solid fa-house"></i>
+                </li>
+                <li class="w-fit hover:bg-neutral-900 hover:rounded-full hover:cursor-pointer ">
+                    <i class="fa-solid fa-search"></i>
+                </li>
+                <li class="w-fit hover:bg-neutral-900 hover:rounded-full hover:cursor-pointer  inverted">
+                    <i class="fa-solid fa-robot"></i>
+                </li>
+                <li class="w-fit hover:bg-neutral-900 hover:rounded-full hover:cursor-pointer ">
+                    <i class="fa-regular fa-bell"></i>
+                </li>
+                <li class="w-fit hover:bg-neutral-900 hover:rounded-full hover:cursor-pointer ">
+                    <i class="fa-regular fa-envelope"></i>
+                </li>
+                <li class="w-fit pt-1 hover:bg-neutral-900 hover:rounded-full hover:cursor-pointer ">
+                    <span class="material-symbols-outlined">group</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
